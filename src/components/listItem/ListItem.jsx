@@ -23,15 +23,12 @@ export default function ListItem({ index, item }) {
         "Getting Movie: ",
         `http://localhost:9090/api/movies/find/${item}`
       );
-      const res = await axios.get(
-        "http://localhost:9090/api/movies/find/" + item,
-        {
-          headers: {
-            token:
-              "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
-          },
-        }
-      );
+      const res = await axios.get("movies/find/" + item, {
+        headers: {
+          token:
+            "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
+        },
+      });
       setMovie(res.data);
     } catch (err) {
       console.log(err);
