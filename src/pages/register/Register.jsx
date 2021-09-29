@@ -30,6 +30,10 @@ export default function Register() {
       history.push("/login");
     } catch (err) {}
   };
+
+  const signInClicked = () => {
+    console.log("Sign in clicked");
+  };
   return (
     <div className="register">
       <div className="top">
@@ -41,10 +45,12 @@ export default function Register() {
           />
           <button
             className="loginButton"
-            onClick={() => {
-              history.push("/login");
-            }}
-            href=""
+            // onClick={() => {
+            //   console.log("Sign in clicked");
+            //   history.push("/login");
+            // }}
+            onClick={signInClicked}
+            // href="/login"
           >
             Sign In
           </button>

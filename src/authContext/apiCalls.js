@@ -5,7 +5,7 @@ export const login = async (user, dispatch) => {
   console.log("Logging In With This Credentials: ", user, dispatch);
   dispatch(loginStart());
   try {
-    const res = await axios.post("http://localhost:9090/api/auth/login", user, {
+    const res = await axios.post("auth/login", user, {
       headers: {
         "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json",

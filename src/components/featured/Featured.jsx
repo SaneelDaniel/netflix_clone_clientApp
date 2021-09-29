@@ -44,7 +44,7 @@ export default function Featured({ type, setGenre }) {
             <option value="crime">Crime</option>
             <option value="fantasy">Fantasy</option>
             <option value="historical">Historical</option>
-            <option value="horror">Horror</option>
+            <option value="Horror">Horror</option>
             <option value="romance">Romance</option>
             <option value="Sci Fi">Sci Fi</option>
             <option value="thriller">Thriller</option>
@@ -57,7 +57,7 @@ export default function Featured({ type, setGenre }) {
       )}
       <img src={content.img} alt="" />
       <div className="info">
-        <img src={content.imgTitle} alt="" />
+        <p src={content.imgTitle} alt="" />
         {console.log("Image For Featured: ", content)}
         <span className="desc">{content.desc}</span>
         <div className="buttons">
